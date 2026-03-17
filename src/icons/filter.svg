@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+  <!-- Icon Name: filter -->
+  <!-- Keyline: portrait (14×20, centered) -->
+  <!-- Construction: funnel shape. Wide horizontal top edge (3,6)→(21,6). Two angled sides
+       converging inward: (3,6)→(10,15) and (21,6)→(14,15). Short vertical stem (10,15)→(10,20)
+       and (14,15)→(14,20) connected by bottom (10,20)→(14,20). Closed funnel silhouette. -->
+  <!-- Optical: top width = 18px, waist width = 4px at y=15, total height = 14px; reads as funnel at 16px -->
+
+  <g id="outline" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 3,6 L 21,6 L 14,15 L 14,20 L 10,20 L 10,15 Z" />
+  </g>
+
+  <g id="fill" style="display:none">
+    <path fill="currentColor" stroke="none" d="M 3,6 L 21,6 L 14,15 L 14,20 L 10,20 L 10,15 Z" />
+  </g>
+</svg>

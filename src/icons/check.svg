@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+  <!-- Icon Name: check -->
+  <!-- Keyline: square (18×18, centered) -->
+  <!-- Construction: two-segment checkmark. Left arm: (4,13)→(9,18) — short, steep, ~60° downward.
+       Right arm: (9,18)→(20,7) — long, shallow, ~40° upward to the right.
+       Junction at (9,18) is the lowest point. Right arm extends far for a confident sweep. -->
+  <!-- Optical: junction slightly left of center gives natural checkmark proportion; right arm longer -->
+
+  <g id="outline" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="4,13 9,18 20,7" />
+  </g>
+
+  <g id="fill" style="display:none">
+    <!-- Checkmark is an open path — thicker stroke for fill weight -->
+    <polyline points="4,13 9,18 20,7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

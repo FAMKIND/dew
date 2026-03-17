@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+  <!-- Icon Name: search -->
+  <!-- Keyline: circle -->
+  <!-- Construction: circle lens centered at (10,10), r=7. Handle: diagonal line from (15.5,15.5)
+       to (20,20) at 45°. Intentional gap between circle edge and handle start for clarity at 16px. -->
+  <!-- Optical: circle slightly left-of-center so handle has room; gap at ~1px preserves legibility -->
+
+  <g id="outline" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="10.5" cy="10.5" r="7" />
+    <line x1="16" y1="16" x2="20.5" y2="20.5" />
+  </g>
+
+  <g id="fill" style="display:none">
+    <!-- Solid lens circle; handle stays as stroke (open path) -->
+    <circle cx="10.5" cy="10.5" r="7" fill="currentColor" stroke="none" />
+    <line x1="16" y1="16" x2="20.5" y2="20.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+  </g>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+  <!-- Icon Name: share -->
+  <!-- Keyline: square (18×18, centered) -->
+  <!-- Construction: three node circles. Node A: top-right (17,5). Node B: left (5,12). Node C: bottom-right (17,19).
+       Two connecting lines: A→B and B→C. The network triangle is the Android/web share metaphor.
+       Each node: circle r=2.5. Lines connect to edge of circles (not center) for clarity. -->
+  <!-- Optical: nodes at corners of an elongated triangle; lines clear of node circles -->
+
+  <g id="outline" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Nodes -->
+    <circle cx="17" cy="5"  r="2.5" />
+    <circle cx="5"  cy="12" r="2.5" />
+    <circle cx="17" cy="19" r="2.5" />
+    <!-- Connecting lines (stopping just before node edges) -->
+    <line x1="7.2"  y1="10.8" x2="14.9" y2="6.2"  />
+    <line x1="7.2"  y1="13.2" x2="14.9" y2="17.8" />
+  </g>
+
+  <g id="fill" style="display:none">
+    <!-- Nodes solid; lines remain as strokes -->
+    <circle cx="17" cy="5"  r="2.5" fill="currentColor" stroke="none" />
+    <circle cx="5"  cy="12" r="2.5" fill="currentColor" stroke="none" />
+    <circle cx="17" cy="19" r="2.5" fill="currentColor" stroke="none" />
+    <line x1="7.2"  y1="10.8" x2="14.9" y2="6.2"  fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="7.2"  y1="13.2" x2="14.9" y2="17.8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+  </g>
+</svg>

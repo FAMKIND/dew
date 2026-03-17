@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+  <!-- Icon Name: sidebar-right -->
+  <!-- Keyline: landscape (20×14, centered) -->
+  <!-- Construction: mirror of sidebar-left. Outer rectangle (3,4)→(21,20).
+       Vertical divider at x=16, running (16,4)→(16,20). Right panel (x=16 to x=21) is the sidebar. -->
+  <!-- Optical: divider at roughly 2/3 from left, matching sidebar-left proportions -->
+
+  <g id="outline" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="4" width="18" height="16" rx="2" />
+    <line x1="16" y1="4" x2="16" y2="20" />
+  </g>
+
+  <g id="fill" style="display:none">
+    <rect x="3" y="4" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.5" />
+    <!-- Right sidebar panel solid-filled -->
+    <path fill="currentColor" stroke="none" d="M16,4 L19,4 C20.1,4 21,4.9 21,6 L21,18 C21,19.1 20.1,20 19,20 L16,20 Z" />
+    <line x1="16" y1="4" x2="16" y2="20" fill="none" stroke="currentColor" stroke-width="1.5" />
+  </g>
+</svg>

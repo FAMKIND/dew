@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+  <!-- Icon Name: pencil -->
+  <!-- Keyline: square (18×18), pencil sits diagonally at 45° -->
+  <!-- Construction: pencil body as a narrow parallelogram rotated 45°.
+       Flat eraser end (top-right) capped with a small cross-line.
+       Triangular point at bottom-left. Writing tip dot implied by round linecap.
+       Body: two parallel diagonal lines from (5,19)→(17,7) and (8,22)→(20,10), connected at ends.
+       Point: lines converge to (3.5,20.5). Eraser cap: short perpendicular line at top-right. -->
+  <!-- Optical: entire icon centered in canvas; diagonal gives dynamic, action-oriented feel -->
+
+  <g id="outline" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Pencil body outline (parallelogram at 45°) -->
+    <path d="M 17,3 L 21,7 L 8,20 L 3,21 L 4,16 Z" />
+    <!-- Eraser divider line -->
+    <line x1="17" y1="7" x2="15" y2="9" />
+  </g>
+
+  <g id="fill" style="display:none">
+    <!-- Solid pencil silhouette -->
+    <path fill="currentColor" stroke="none" d="M 17,3 L 21,7 L 8,20 L 3,21 L 4,16 Z" />
+    <!-- Eraser divider as negative — omitted at fill for simplicity; silhouette is primary -->
+  </g>
+</svg>

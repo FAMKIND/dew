@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+  <!-- Icon Name: bell (notification) -->
+  <!-- Keyline: portrait (14×20, centered) -->
+  <!-- Construction: bell dome — a rounded trapezoid body. Top loop/stem at (12,3)→small arc.
+       Dome: path from (5,18) arcing up and over to (19,18) via (12,6).
+       Flat bottom rim: line (4,18)→(20,18). Clapper: small circle or arc at (12,21).
+       Hang loop: small arc or line at top center (12,3)→(12,5). -->
+  <!-- Optical: dome asymmetry: body wider at bottom for a natural bell silhouette; nudged 1px down -->
+
+  <g id="outline" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Hang loop at top -->
+    <path d="M 10,4 Q 10,2 12,2 Q 14,2 14,4" />
+    <!-- Bell dome body -->
+    <path d="M 5,18 C 5,18 5,8 12,8 C 19,8 19,18 19,18" />
+    <!-- Bottom rim (flat, wider than body) -->
+    <line x1="3.5" y1="18" x2="20.5" y2="18" />
+    <!-- Clapper dot -->
+    <path d="M 10,18 Q 10,21 12,21 Q 14,21 14,18" />
+  </g>
+
+  <g id="fill" style="display:none">
+    <!-- Solid bell body -->
+    <path fill="currentColor" stroke="none" d="M 5,18 C 5,18 5,8 12,8 C 19,8 19,18 19,18 Z" />
+    <!-- Rim as solid thick bar -->
+    <rect x="3.5" y="17.25" width="17" height="1.5" rx="0.75" fill="currentColor" stroke="none" />
+    <!-- Hang loop (open, keep stroke) -->
+    <path d="M 10,4 Q 10,2 12,2 Q 14,2 14,4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+    <!-- Clapper (open arc, keep stroke) -->
+    <path d="M 10,18 Q 10,21 12,21 Q 14,21 14,18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+  </g>
+</svg>

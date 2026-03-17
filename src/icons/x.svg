@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+  <!-- Icon Name: x (close) -->
+  <!-- Keyline: square (18×18, centered) -->
+  <!-- Construction: two diagonal lines crossing at (12,12). Line 1: (4,4)→(20,20) at 45°.
+       Line 2: (20,4)→(4,20) at 135°. Same bounding box as plus for visual consistency. -->
+
+  <g id="outline" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="4"  y1="4"  x2="20" y2="20" />
+    <line x1="20" y1="4"  x2="4"  y2="20" />
+  </g>
+
+  <g id="fill" style="display:none">
+    <line x1="4"  y1="4"  x2="20" y2="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+    <line x1="20" y1="4"  x2="4"  y2="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+  </g>
+</svg>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+  <!-- Icon Name: gear (settings) -->
+  <!-- Keyline: circle (center 12,12) -->
+  <!-- Construction: 6-tooth gear polygon. Inner radius r=6.5 (valleys), outer radius r=9 (tooth tips).
+       Each of 6 teeth occupies 60°: tooth tip spans ±12° from center, valleys at ±20°.
+       Center hole r=2.5. All 24 points computed via trig at center (12,12). -->
+  <!-- Optical: 6 teeth minimum for gear recognition; clean polygon edges with round joins -->
+
+  <g id="outline" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <polygon points="
+      9.78,5.89  10.13,3.20  13.87,3.20  14.22,5.89
+      16.18,7.02  18.69,5.98  20.56,9.22  18.40,10.87
+      18.40,13.13  20.56,14.78  18.69,18.02  16.18,16.98
+      14.22,18.11  13.87,20.80  10.13,20.80  9.78,18.11
+      7.82,16.98  5.31,18.02  3.44,14.78  5.60,13.13
+      5.60,10.87  3.44,9.22  5.31,5.98  7.82,7.02
+    " />
+    <circle cx="12" cy="12" r="2.5" />
+  </g>
+
+  <g id="fill" style="display:none">
+    <!-- Gear solid with center hole as negative space via evenodd -->
+    <path fill="currentColor" stroke="none" fill-rule="evenodd" d="
+      M 9.78,5.89 L 10.13,3.20 L 13.87,3.20 L 14.22,5.89
+      L 16.18,7.02 L 18.69,5.98 L 20.56,9.22 L 18.40,10.87
+      L 18.40,13.13 L 20.56,14.78 L 18.69,18.02 L 16.18,16.98
+      L 14.22,18.11 L 13.87,20.80 L 10.13,20.80 L 9.78,18.11
+      L 7.82,16.98 L 5.31,18.02 L 3.44,14.78 L 5.60,13.13
+      L 5.60,10.87 L 3.44,9.22 L 5.31,5.98 L 7.82,7.02 Z
+      M 12,9.5 A 2.5,2.5 0 1 0 12,14.5 A 2.5,2.5 0 1 0 12,9.5 Z" />
+  </g>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+  <!-- Icon Name: home -->
+  <!-- Keyline: square (18×18, centered) -->
+  <!-- Construction: chevron roof — two lines from (3,11) and (21,11) meeting at peak (12,3).
+       Rectangular body: left wall (5,11)→(5,21), bottom (5,21)→(19,21), right wall (19,21)→(19,11).
+       Door: rect 6×6 centered horizontally, sitting on the floor at y=15→21. -->
+  <!-- Optical: peak at y=3 gives clear triangular silhouette even at 16px -->
+
+  <g id="outline" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="3,11 12,3 21,11" />
+    <polyline points="5,11 5,21 19,21 19,11" />
+    <rect x="9" y="15" width="6" height="6" />
+  </g>
+
+  <g id="fill" style="display:none">
+    <!-- House body as compound path with door as negative space -->
+    <path fill="currentColor" stroke="none" fill-rule="evenodd"
+      d="M12,3 L21,11 L19,11 L19,21 L5,21 L5,11 L3,11 Z
+         M9,15 L9,21 L15,21 L15,15 Z" />
+  </g>
+</svg>
