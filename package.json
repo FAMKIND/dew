@@ -1,0 +1,18 @@
+{
+  "name": "@famkind/dew",
+  "version": "0.1.0",
+  "description": "The icon library for Seed — tiny, essential SVG icons for FAMKIND's open-source CSS framework",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FAMKIND/dew"
+  },
+  "homepage": "https://famkind.com",
+  "main": "dist/dew.css",
+  "files": ["src/", "dist/"],
+  "scripts": {
+    "build": "node scripts/build.js",
+    "preview": "open preview/index.html"
+  },
+  "keywords": ["icons", "svg", "minimal", "ui", "design-system", "seed", "famkind", "dew"]
+}
