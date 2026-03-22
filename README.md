@@ -1,6 +1,6 @@
 # Dew Icons
 
-**Dew** is the icon library for [Seed](https://github.com/FAMKIND/seed) — FAMKIND's open-source CSS framework. 20 essential SVG icons for 0-to-1 products, each in outline and fill variants.
+**Dew** is the icon library for [Seed](https://github.com/FAMKIND/seed) — FAMKIND's open-source CSS framework. 52 essential SVG icons for 0-to-1 products.
 
 Like morning dew activates a seed, these tiny icons bring the framework to life.
 
@@ -13,10 +13,8 @@ Like morning dew activates a seed, these tiny icons bring the framework to life.
 The simplest usage — copy any icon from `src/icons/` and paste it directly into your HTML:
 
 ```html
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
-  <g id="outline" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-    <!-- paths -->
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" aria-hidden="true">
+  <!-- paste path from src/icons/ here -->
 </svg>
 ```
 
@@ -49,43 +47,15 @@ The `.dew` base class sets `display: inline-block`, sizes the icon to `1.5em`, a
 .icon-danger  { color: #ff3b30; }
 ```
 
-### Outline vs Fill Variants
+### Chevrons
 
-Every icon ships in two variants:
-
-| Variant | Class suffix | When to use |
-|---|---|---|
-| Outline | `.dew-[name]` | Default state, navigation, inactive |
-| Fill | `.dew-[name]-fill` | Active state, selected, emphasized |
-
-**Classic toggle pattern:**
+All four directional chevrons are included as separate icons:
 
 ```html
-<button class="favorite-btn" aria-pressed="false">
-  <span class="dew dew-heart" aria-hidden="true"></span>
-  <span class="dew dew-heart-fill" aria-hidden="true" style="display:none"></span>
-  <span class="sr-only">Favorite</span>
-</button>
-```
-
-```js
-btn.addEventListener('click', () => {
-  const pressed = btn.getAttribute('aria-pressed') === 'true';
-  btn.setAttribute('aria-pressed', String(!pressed));
-  btn.querySelector('.dew-heart').style.display = pressed ? '' : 'none';
-  btn.querySelector('.dew-heart-fill').style.display = pressed ? 'none' : '';
-});
-```
-
-### Chevron Rotation
-
-`chevron-right.svg` is the only directional chevron shipped. Rotate it via CSS for all four directions:
-
-```html
-<span class="dew dew-chevron-right"></span>                          <!-- → right  -->
-<span class="dew dew-chevron-right" style="transform:rotate(90deg)"></span>  <!-- ↓ down   -->
-<span class="dew dew-chevron-right" style="transform:rotate(180deg)"></span> <!-- ← left   -->
-<span class="dew dew-chevron-right" style="transform:rotate(270deg)"></span> <!-- ↑ up     -->
+<span class="dew dew-chevron-right"></span>
+<span class="dew dew-chevron-left"></span>
+<span class="dew dew-chevron-up"></span>
+<span class="dew dew-chevron-down"></span>
 ```
 
 ---
@@ -110,13 +80,11 @@ Dew ships raw SVG files and a CSS file — no framework wrappers in v0.1. Use th
 ### React
 
 ```jsx
-// Option 1: inline SVG component (copy from src/icons/)
+// Option 1: inline SVG component (copy path from src/icons/)
 function HomeIcon({ size = 24, ...props }) {
   return (
-    <svg viewBox="0 0 24 24" width={size} height={size} aria-hidden="true" {...props}>
-      <g fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        {/* paste paths here */}
-      </g>
+    <svg viewBox="0 0 24 24" width={size} height={size} fill="none" aria-hidden="true" {...props}>
+      {/* paste path here */}
     </svg>
   );
 }
@@ -129,12 +97,10 @@ import '@famkind/dew/dist/dew.css';
 ### Vue
 
 ```vue
-<!-- Option 1: inline SVG -->
+<!-- Option 1: inline SVG (copy path from src/icons/) -->
 <template>
-  <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
-    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <!-- paste paths here -->
-    </g>
+  <svg viewBox="0 0 24 24" width="24" height="24" fill="none" aria-hidden="true">
+    <!-- paste path here -->
   </svg>
 </template>
 
@@ -151,28 +117,60 @@ import '@famkind/dew/dist/dew.css'
 
 ## The Icons
 
-| Name | Variants | Category |
-|---|---|---|
-| `home` | outline, fill | Navigation |
-| `search` | outline, fill | Navigation |
-| `menu` | outline, fill | Navigation |
-| `sidebar-left` | outline, fill | Navigation |
-| `sidebar-right` | outline, fill | Navigation |
-| `chevron-right` | outline, fill | Navigation |
-| `arrow-left` | outline, fill | Navigation |
-| `plus` | outline, fill | Actions |
-| `x` | outline, fill | Actions |
-| `pencil` | outline, fill | Actions |
-| `trash` | outline, fill | Actions |
-| `gear` | outline, fill | Actions |
-| `share` | outline, fill | Actions |
-| `filter` | outline, fill | Actions |
-| `user` | outline, fill | Status |
-| `bell` | outline, fill | Status |
-| `check` | outline, fill | Status |
-| `alert-triangle` | outline, fill | Status |
-| `info` | outline, fill | Status |
-| `heart` | outline, fill | Status |
+| Name | Category |
+|---|---|
+| `home` | Navigation |
+| `search` | Navigation |
+| `menu-lines` | Navigation |
+| `ellipsis-menu` | Navigation |
+| `chevron-right` | Navigation |
+| `chevron-left` | Navigation |
+| `chevron-up` | Navigation |
+| `chevron-down` | Navigation |
+| `chevron-up-down` | Navigation |
+| `sidebar-left-open` | Navigation |
+| `sidebar-left-closed` | Navigation |
+| `sidebar-right-open` | Navigation |
+| `sidebar-right-closed` | Navigation |
+| `plus` | Actions |
+| `close` | Actions |
+| `negative` | Actions |
+| `pencil` | Actions |
+| `trash` | Actions |
+| `gear` | Actions |
+| `share` | Actions |
+| `filter-horizontal` | Actions |
+| `link` | Actions |
+| `undo` | Actions |
+| `download` | Actions |
+| `play` | Actions |
+| `person` | People |
+| `people` | People |
+| `bell-on` | Notifications |
+| `bell-off` | Notifications |
+| `bell-ringing` | Notifications |
+| `check` | Status |
+| `alert-triangle` | Status |
+| `information-circle` | Status |
+| `question-mark-circle` | Status |
+| `shield-check` | Status |
+| `flag` | Status |
+| `heart` | Status |
+| `star` | Status |
+| `eye-open` | Status |
+| `eye-closed` | Status |
+| `archive` | Content |
+| `folder` | Content |
+| `folder-open` | Content |
+| `calendar` | Content |
+| `chat` | Content |
+| `camera-on` | Media |
+| `camera-off` | Media |
+| `microphone` | Media |
+| `speaker-on` | Media |
+| `music-note` | Media |
+| `moon` | Utility |
+| `sun` | Utility |
 
 ---
 
