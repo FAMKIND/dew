@@ -2,10 +2,11 @@
 
 ## Instructions for Claude / Claude Code
 
-Read `DESIGN_SYSTEM.md` for all rules. Study these reference icons for style:
-- `src/icons/home.svg` (tests basic shapes, square keyline)
-- `src/icons/search.svg` (tests circles + angled lines, circle keyline)
-- `src/icons/chevron-right.svg` (tests minimal geometry, portrait keyline)
+Read both `DESIGN_SYSTEM.md` and `STYLE_ANALYSIS.md` before starting. Study these three reference icons as style anchors — they represent the range from minimal to complex:
+
+- `src/icons/close.svg` — minimal: two `L` commands in one path, `stroke-linecap="round"`
+- `src/icons/bell-on.svg` — moderate: multiple `M` subpaths, cubic beziers, no `stroke-linecap`
+- `src/icons/home.svg` — simple: mix of `L` and `C` commands, `stroke-linecap="round"`, architectural shape
 
 ---
 
@@ -14,59 +15,71 @@ Read `DESIGN_SYSTEM.md` for all rules. Study these reference icons for style:
 **Name:** [kebab-case-name]
 **Description:** [what the icon represents]
 **Metaphor:** [the real-world object or visual concept]
-**Suggested keyline:** [circle / square / landscape / portrait]
+**Similar to:** [which existing icon in src/icons/ is closest in construction]
 
 ---
 
 ## Before writing SVG, state:
 
-1. **Keyline:** Which shape template and why
-2. **Construction:** What geometric primitives make up this icon
-3. **Optical adjustments:** Anything that needs nudging for visual balance
-4. **Fill strategy:** How the outline converts to fill — which paths become solid, which become negative space, what gets omitted
+1. **Construction:** What geometric primitives (lines, arcs, bezier curves) make up this icon? Can they be combined into a single `<path>` with multiple `M` subpaths, or do they need separate `<path>` elements?
+2. **Path commands:** Will you use `L` (lines), `C` (cubic bezier), `A` (arcs)? Never `Q`.
+3. **`stroke-linecap`:** Does the path have exposed endpoints? If yes, add `stroke-linecap="round"`. If all paths close back to their origin, omit it.
+4. **Coordinate range:** Where does this icon sit on the 24×24 canvas? Reference the ranges in STYLE_ANALYSIS.md.
 
 ---
 
-## Then output:
+## Output format
 
-A single SVG file saved to `src/icons/[name].svg`, following the format below:
+A single SVG file saved to `src/icons/[name].svg`:
 
-```svg
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
-  <!-- Icon Name: [name] -->
-  <!-- Keyline: [circle|square|landscape|portrait] -->
-  <!-- Construction: [describe what was drawn] -->
-
-  <g id="outline" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-    <!-- outline paths -->
-  </g>
-
-  <g id="fill" style="display:none">
-    <!-- fill paths -->
-  </g>
+```xml
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <path d="..." stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
 </svg>
 ```
 
-After generating the SVG, run:
+For icons with no exposed endpoints (closed paths):
+
+```xml
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <path d="...Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+</svg>
+```
+
+For icons with two independent closed shapes (like `eye-open`):
+
+```xml
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <path d="...Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="...Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+</svg>
+```
+
+---
+
+## After generating
+
+Run:
 
 ```bash
 node scripts/build.js
 open preview/index.html
 ```
 
-And verify the icon at 16px, 24px, 32px, and 48px in both light and dark mode.
+Check the icon at 16px, 24px, 32px, and 48px in both light and dark mode.
 
 ---
 
 ## Quality Checklist
 
-- [ ] `viewBox="0 0 24 24"`
-- [ ] All colors are `currentColor` — no hardcoded values
-- [ ] Outline: `fill="none"`, `stroke="currentColor"`, `stroke-width="1.5"`, round linecap and linejoin
-- [ ] Fill: closed paths `fill="currentColor" stroke="none"`, open paths keep stroke
-- [ ] Both `#outline` and `#fill` groups present; fill group hidden
-- [ ] Recognizable at 16×16px
-- [ ] Correct keyline used
-- [ ] No decorative detail — every line serves the concept
-- [ ] File named `kebab-case.svg` in `src/icons/`
-- [ ] Construction comments in file
+- [ ] `viewBox="0 0 24 24"` and `fill="none"` on `<svg>`
+- [ ] `stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"` on all stroke paths
+- [ ] `stroke-linecap="round"` only on paths with exposed endpoints
+- [ ] No `<circle>`, `<rect>`, `<line>`, `<polyline>` — use `<path>` only
+- [ ] No `Q` bezier commands — use `C` for curves
+- [ ] No hardcoded colors
+- [ ] No wrapper `<g>` groups
+- [ ] Multiple sub-shapes in one `<path>` using multiple `M` commands where possible
+- [ ] Coordinates use 2+ decimal places (not whole integers)
+- [ ] Recognizable at 16px
+- [ ] Filename is `kebab-case.svg` in `src/icons/`
