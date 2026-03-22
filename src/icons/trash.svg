@@ -1,34 +1,3 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
-  <!-- Icon Name: trash -->
-  <!-- Keyline: portrait (14×20, centered) -->
-  <!-- Construction: rectangular can body (5,8)→(19,21). Lid: wider rect (3,6)→(21,8), rx=1.
-       Handle: short arc/line (10,6)→(10,4)→(14,4)→(14,6) — a small arch on top.
-       Two vertical interior lines at x=9 and x=15 suggest compartments — kept at minimal detail. -->
-  <!-- Optical: lid extends 2px beyond body on each side; handle is minimal so it reads at 16px -->
-
-  <g id="outline" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-    <!-- Handle arch -->
-    <path d="M 10,6 L 10,4 Q 10,3 11,3 L 13,3 Q 14,3 14,4 L 14,6" />
-    <!-- Lid -->
-    <line x1="3" y1="6" x2="21" y2="6" />
-    <!-- Body -->
-    <path d="M 5,8 L 5,20 Q 5,21 6,21 L 18,21 Q 19,21 19,20 L 19,8 Z" />
-    <!-- Interior lines -->
-    <line x1="9"  y1="10" x2="9"  y2="18" />
-    <line x1="15" y1="10" x2="15" y2="18" />
-  </g>
-
-  <g id="fill" style="display:none">
-    <!-- Solid can body; interior lines become negative space -->
-    <!-- Handle -->
-    <path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-          d="M 10,6 L 10,4 Q 10,3 11,3 L 13,3 Q 14,3 14,4 L 14,6" />
-    <!-- Lid as solid rect -->
-    <rect x="3" y="5.25" width="18" height="1.5" rx="0.75" fill="currentColor" stroke="none" />
-    <!-- Body solid with interior lines as cutouts -->
-    <path fill="currentColor" stroke="none" fill-rule="evenodd"
-          d="M 5,8 L 5,20 Q 5,21 6,21 L 18,21 Q 19,21 19,20 L 19,8 Z
-             M 8.25,10 L 9.75,10 L 9.75,18 L 8.25,18 Z
-             M 14.25,10 L 15.75,10 L 15.75,18 L 14.25,18 Z" />
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <path d="M14.739990234375,9L14.3939208984375,18M9.60595703125,18L9.260009765625,9M19.2279052734375,5.7900390625C19.5699462890625,5.842041015625,19.909912109375,5.89697265625,20.25,5.9560546875M19.2279052734375,5.791015625L18.159912109375,19.673095703125C18.069580078125,20.84521484375,17.091796875,21.750244140625,15.9158935546875,21.75L8.083984375,21.75C6.908203125,21.750244140625,5.930419921875,20.84521484375,5.8399658203125,19.673095703125L4.77197265625,5.7900390625M19.2279052734375,5.7900390625C18.0738525390625,5.615478515625,16.9136962890625,5.483154296875,15.75,5.39306640625M3.75,5.955078125C4.0899658203125,5.89599609375,4.429931640625,5.841064453125,4.77197265625,5.7900390625M4.77197265625,5.7900390625C5.9261474609375,5.615478515625,7.086181640625,5.483154296875,8.25,5.39306640625M15.75,5.39306640625L15.75,4.47705078125C15.75,3.297119140625,14.8399658203125,2.31298828125,13.659912109375,2.27587890625C12.5535888671875,2.24072265625,11.4462890625,2.24072265625,10.3399658203125,2.27587890625C9.159912109375,2.31298828125,8.25,3.298095703125,8.25,4.47705078125L8.25,5.39306640625M15.75,5.39306640625C13.253662109375,5.2001953125,10.7462158203125,5.2001953125,8.25,5.39306640625" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
 </svg>

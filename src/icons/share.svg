@@ -1,27 +1,3 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
-  <!-- Icon Name: share -->
-  <!-- Keyline: square (18×18, centered) -->
-  <!-- Construction: three node circles. Node A: top-right (17,5). Node B: left (5,12). Node C: bottom-right (17,19).
-       Two connecting lines: A→B and B→C. The network triangle is the Android/web share metaphor.
-       Each node: circle r=2.5. Lines connect to edge of circles (not center) for clarity. -->
-  <!-- Optical: nodes at corners of an elongated triangle; lines clear of node circles -->
-
-  <g id="outline" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-    <!-- Nodes -->
-    <circle cx="17" cy="5"  r="2.5" />
-    <circle cx="5"  cy="12" r="2.5" />
-    <circle cx="17" cy="19" r="2.5" />
-    <!-- Connecting lines (stopping just before node edges) -->
-    <line x1="7.2"  y1="10.8" x2="14.9" y2="6.2"  />
-    <line x1="7.2"  y1="13.2" x2="14.9" y2="17.8" />
-  </g>
-
-  <g id="fill" style="display:none">
-    <!-- Nodes solid; lines remain as strokes -->
-    <circle cx="17" cy="5"  r="2.5" fill="currentColor" stroke="none" />
-    <circle cx="5"  cy="12" r="2.5" fill="currentColor" stroke="none" />
-    <circle cx="17" cy="19" r="2.5" fill="currentColor" stroke="none" />
-    <line x1="7.2"  y1="10.8" x2="14.9" y2="6.2"  fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-    <line x1="7.2"  y1="13.2" x2="14.9" y2="17.8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <path d="M9,8.250019073486328L7.5,8.250019073486328C6.25732421875,8.250019073486328,5.25,9.257343292236328,5.25,10.500019073486328L5.25,19.500019073486328C5.25,20.742694854736328,6.25732421875,21.750019073486328,7.5,21.750019073486328L16.5,21.750019073486328C17.74267578125,21.750019073486328,18.75,20.742694854736328,18.75,19.500019073486328L18.75,10.500019073486328C18.75,9.257343292236328,17.74267578125,8.250019073486328,16.5,8.250019073486328L15,8.250019073486328M15,5.25001859664917L12,2.250018835067749L9,5.25001859664917M12,2.250018835067749L12,15.000019073486328" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
 </svg>
